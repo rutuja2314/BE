@@ -27,5 +27,6 @@ contract StudentData {
     // Fallback function to handle unexpected calls
     fallback() external {
         // This function can be used to log or handle unexpected calls
+        emit FallbackCalled(msg.sender, msg.value, "Fallback function called");
     }
 }
